@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Image Editor</title>
+    <link rel="stylesheet" href="styles.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fabric.js/5.3.0/fabric.min.js"></script>
+    <script defer src="js/editor.js"></script>
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #f9f9f9;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        min-height: 100vh;
+      }
+
+      h1 {
+        margin: 20px 0;
+        color: #333;
+      }
+
+      #controls-wrapper {
+        background-color: #ffffff;
+        padding: 15px 25px;
+        border-radius: 12px;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        margin-bottom: 20px;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+        justify-content: center;
+      }
+
+      button {
+        padding: 8px 14px;
+        font-size: 14px;
+        border: none;
+        background-color: #007bff;
+        color: white;
+        border-radius: 6px;
+        cursor: pointer;
+        transition: background-color 0.2s;
+      }
+
+      button:hover {
+        background-color: #0056b3;
+      }
+
+      #colorPicker {
+        margin-left: 5px;
+        padding: 0;
+        width: 40px;
+        height: 34px;
+        border: none;
+        cursor: pointer;
+      }
+
+      canvas {
+        border: 2px solid #ccc;
+        border-radius: 8px;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+      }
+
+      .back-button {
+        align-self: flex-start;
+        margin-left: 20px;
+        margin-top: 20px;
+      }
+
+      .back-button button {
+        background-color: #6c757d;
+      }
+
+      .back-button button:hover {
+        background-color: #5a6268;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="back-button">
+      <button onclick="window.location.href='index.html'">← Back</button>
+    </div>
+
+    <h1>Image Editor</h1>
+
+    <div id="controls-wrapper">
+      <button id="addTextBtn">Add Text</button>
+      <button id="addCircleBtn">Add Circle</button>
+      <button id="addRectBtn">Add Rectangle</button>
+      <button id="addTriangleBtn">Add Triangle</button>
+      <button id="addPolygonBtn">Add Polygon</button>
+      <label for="colorPicker" style="display: flex; align-items: center">
+        <span style="margin-right: 5px">Color:</span>
+        <input type="color" id="colorPicker" value="#000000" />
+      </label>
+      <button id="downloadBtn">Download</button>
+    </div>
+
+    <canvas id="imageCanvas" width="600" height="400"></canvas>
+  </body>
+</html>

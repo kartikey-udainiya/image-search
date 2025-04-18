@@ -1,0 +1,114 @@
+body {
+  font-family: sans-serif;
+  text-align: center;
+  background-color: #f2f2f2;
+}
+
+input {
+  padding: 10px;
+  width: 300px;
+}
+button {
+  padding: 8px 14px;
+  font-size: 14px;
+  border: none;
+  background-color: #d0eaff; /* soft blue */
+  color: #333;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.2s, box-shadow 0.2s;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+button:hover {
+  background-color: #b5dbff; /* slightly deeper blue */
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+}
+
+#colorPicker {
+  margin-left: 5px;
+  padding: 0;
+  width: 40px;
+  height: 34px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  cursor: pointer;
+  background-color: #fff;
+}
+
+.results-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+  padding: 20px;
+  justify-items: center;
+}
+
+.results-grid img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  cursor: pointer;
+  border: 2px solid transparent;
+  transition: border 0.3s;
+}
+
+.results-grid img:hover {
+  border: 2px solid #555;
+}
+
+.controls {
+  margin-top: 20px;
+}
+#backBtn {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  padding: 10px;
+  font-size: 16px;
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+#backBtn:hover {
+  background-color: #45a049;
+}
+
+#imageCanvas {
+  width: 100%;
+  height: 100%;
+}
+button {
+  padding: 8px 14px;
+  font-size: 14px;
+  border: none;
+  background-color: #cce5ff; /* Light blue */
+  color: #333;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.2s ease-in-out;
+}
+
+button:hover {
+  background-color: #99ccff; /* Softer hover */
+}
+
+.back-button button {
+  background-color: #dee2e6; /* Soft gray */
+  color: #333;
+}
+
+.back-button button:hover {
+  background-color: #ced4da;
+}
+
+span {
+  position: absolute; /* Positions element relative to the nearest positioned ancestor */
+  top: 5px; /* Adjusts distance from the top edge of the page */
+  left: 5px; /* Adjusts distance from the left edge of the page */
+  margin: 0; /* Removes default margin */
+  font-size: 12px; /* Adjust the font size as needed */
+  color: #333; /* Adjust text color as needed */
+}
